@@ -31,10 +31,8 @@ class WebRequestTestCase(unittest.TestCase):
 	def test_download(self):
 		self.web.download(self.example_url, self.example_file)
 
-		dir_path = os.path.isdir(self.example_dir)
 		file_path = os.path.isfile(self.example_dir + self.example_file)
 
-		self.assertTrue(dir_path)
 		self.assertTrue(file_path)
 
 	def main(self):
