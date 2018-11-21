@@ -1,9 +1,14 @@
+import sys
 from tests.web_request import WebRequestTestCase
+from tests.reddit_thread_reader import RedditThreadReaderTestCase
+from tests.audio_video_merger import AudioVideoMergerTestCase
 
-class UnitTest:
+if __name__ == '__main__':
+	web_test = WebRequestTestCase()
+	web_test.main()
 
-	def __init__(self):
-		self.unittest = WebRequestTestCase()
-		self.unittest.main()
+	reddit_test = RedditThreadReaderTestCase()
+	reddit_test.main()
 
-UnitTest()
+	merge_test = AudioVideoMergerTestCase()
+	merge_test.main()
